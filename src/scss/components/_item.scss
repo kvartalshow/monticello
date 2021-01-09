@@ -1,0 +1,13 @@
+.item{
+    text-transform: uppercase;
+        @include flex(center, center, row, nowrap);
+        @include text($h14, 400, $white, $f-gotham-book);
+        cursor: pointer;
+
+        &:hover>.cercle--white {
+            background-color: $white;
+        }
+        &:hover>.cercle--black {
+            background-color: $black;
+        }
+}

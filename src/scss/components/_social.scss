@@ -1,0 +1,52 @@
+.social {
+    @include flex(center, center, row, nowrap);
+
+    &__icon {
+        transition-property: color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+
+        &--black {
+            color: $black;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    &__item {
+        @include flex(center, center, row, nowrap);
+        @include size(40px, 40px, true);
+        border: 1px solid $white;
+        cursor: pointer;
+        transition-property: background;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+
+        &:not(:last-of-type) {
+            margin-right: 20px;
+        }
+
+        &:hover {
+            &>.social__icon {
+                color: rgba(126, 90, 255, 0.9);
+            }
+
+            background-color: $white;
+        }
+
+        &--black {
+            border: 1px solid $black;
+
+            &:hover {
+                &>.social__icon--black {
+                    color: $white;
+                }
+
+                background-color: $black;
+            }
+
+        }
+    }
+}

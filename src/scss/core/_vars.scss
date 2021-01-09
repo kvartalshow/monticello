@@ -1,6 +1,11 @@
 //color
+$white: white;
+$black: black;
+$dark-blue: #2c4058;
 
 //font
+$f-gotham-book: 'GothamBook';
+$f-gotham-bold: 'gothambold1';
 
 //font-size
 $base-font-size: 16px;
@@ -9,4 +14,10 @@ $base-font-size: 16px;
   @return #{$remSize}rem;
 }
 
+$h80: calcRem(80px);
+$h44: calcRem(44px);
+$h30: calcRem(30px);
+$h22: calcRem(22px);
+$h18: calcRem(18px);
+$h14: calcRem(14px);
 // $h90: calcRem(90px);

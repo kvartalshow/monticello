@@ -3,7 +3,6 @@
     background-image: url(./../assets/images/bg_header.png);
     background-position: center;
 
-
     &:after {
         content: '';
         position: absolute;
@@ -16,12 +15,73 @@
 
     &__inner {
         position: relative;
+        height: 100vh;
         z-index: 3;
         color: #fff;
-        padding: 50px;
+        padding-top: 50px;
+        @include flex(space-between, center, column, wrap);
+    }
+
+    &__menu {
+        @include flex(space-between, center, row, nowrap);
+        width: 100%;
+        padding: 0 3%;
     }
 
     &__slider {
-        height: 200px;
+        max-height: 500px;
+        width: 100%;
     }
+
+    &__items {
+        @include flex(center, center, row, nowrap);
+
+        @include media-d-m($screen-desktop-large) {
+            display: none;
+        }
+    }
+
+    &__item {
+        &:not(:last-of-type) {
+            margin-right: 65px;
+        }
+    }
+
+    &__social.social {
+        @include media-d-m($screen-desktop-large) {
+            display: none;
+        }
+    }
+
+    &__a {
+        color: $white;
+
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+
+    &__slider-h2 {
+        @include text($h80, 700, $white, $f-gotham-bold);
+        text-transform: uppercase;
+    }
+
+    &__slider-p {
+        @include text($h18, 400, $white, $f-gotham-book);
+        text-transform: uppercase;
+    }
+
+    &__scroll-down {
+        @include flex(center, flex-start, row, nowrap);
+        @include size(40px, 40px, true);
+        border: 1px solid $white;
+        margin-bottom: 50px;
+    }
+
+    &__arrow {
+        font-size: $h30;
+        margin-top: -18px;
+    }
+
 }

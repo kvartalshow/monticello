@@ -12,12 +12,10 @@
   align-items: $align;
 }
 
-@mixin flex(
-  $justify-content: flex-start,
+@mixin flex($justify-content: flex-start,
   $align-items: stretch,
   $direction: row,
-  $wrap: nowrap
-) {
+  $wrap: nowrap) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify-content;
@@ -30,6 +28,7 @@
     size: $size;
     weight: $weight;
   }
+
   color: $color;
   font-family: $font-family;
   @content;
@@ -39,9 +38,11 @@
   width: $size-w;
   height: $size-h;
   flex-shrink: 0;
+
   @if $round {
     border-radius: 50%;
   }
+
   @content;
 }
 
@@ -70,8 +71,7 @@
   @content;
 }
 
-$z-index: (
-  immortal: 100,
+$z-index: (immortal: 100,
   superpopup: 20,
   popup: 15,
   drawer: 12,
@@ -80,16 +80,17 @@ $z-index: (
   dropdown: 2,
   wrapper: 1,
   default: 0,
-  under: -1
-);
+  under: -1);
 
 @mixin padding-hack($padding: 50%, $size: contain, $dev: false) {
   position: relative;
   height: 0;
   padding-bottom: $padding;
+
   @if $dev {
     background-color: red;
   }
+
   img {
     position: absolute;
     top: 0;
@@ -100,6 +101,7 @@ $z-index: (
     height: 100%;
     object-position: center;
     object-fit: $size;
+
     @if $dev {
       object-fit: contain;
     }
@@ -133,13 +135,21 @@ $screen-retina: 1660px;
     @content;
   }
 }
+
 @mixin media-d-m($screen: $screen-desktop) {
   @media screen and (max-width: $screen) {
     @content;
   }
 }
+
 @mixin bg-image($url, $cover: cover, $n-rep: no-repeat) {
   background-image: url(#{$url});
-  background-size: $cover ;
+  background-size: $cover;
   background-repeat: $n-rep;
+}
+
+@mixin max-width($max-w) {
+  max-width: $max-w;
+  width: 100%;
+  margin: 0 auto;
 }

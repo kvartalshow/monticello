@@ -1,0 +1,12 @@
+.title {
+    @include text($h44, 700, $dark-blue, $f-gotham-bold);
+    @include flex(center, center, column, nowrap);
+    text-transform: uppercase;
+
+    &__line--blue {
+        margin-bottom: 20px;
+        width: 100px;
+        height: 2px;
+        background-color: $dark-blue;
+    }
+}

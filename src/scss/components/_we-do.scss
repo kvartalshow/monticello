@@ -1,0 +1,24 @@
+.we-do{
+    &__inner{
+        padding: 100px 3%;
+    }
+
+    &__block{
+        @include flex (center, center, row, nowrap);
+    }
+
+    &__img{
+        width: 100%;
+        @include padding-hack(50%);
+
+        &:not(:first-of-type){
+            margin-left: 60px;
+        }
+
+        &:not(:last-of-type){
+            margin-right: 60px;
+        }
+    }
+
+    
+}
