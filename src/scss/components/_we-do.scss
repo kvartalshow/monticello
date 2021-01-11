@@ -3,15 +3,30 @@
         padding: 100px 3%;
     }
 
+    &__banner {
+        max-width: 630px;
+    }
+
     &__title {
         margin-bottom: 170px;
     }
 
     &__block {
-        @include flex (center, center, row, nowrap);
+        &--left {
+            @include flex (center, center, row, nowrap);
 
-        &:not(:first-of-type) {
+        }
+
+        &--right {
+            @include flex (center, center, row-reverse, nowrap);
+        }
+
+        &:not(:last-of-type) {
             margin-bottom: 210px;
+
+            @include media-d-m($screen-desktop-large) {
+                margin-bottom: 140px;
+            }
         }
 
         @include media-d-m($screen-desktop-large) {
@@ -21,11 +36,63 @@
     }
 
     &__images {
-        position: relative;
 
-        @include media-d-m($screen-desktop-large) {
+        &--left {
+            position: relative;
 
-            @include flex (center, center, column, nowrap);
+            box-shadow: -215px -70px 0px 0px $blue;
+
+            @include media-d-m($screen-retina) {
+                box-shadow: -150px -50px 0px 0px $blue;
+            }
+
+            @include media-d-m($screen-fullhd) {
+                box-shadow: -100px -50px 0px 0px $blue;
+            }
+
+            @include media-d-m($screen-hd) {
+                box-shadow: -50px -50px 0px 0px $blue;
+            }
+
+            @include media-d-m($screen-desktop-large) {
+                bottom: -25px;
+                right: -25px;
+            }
+
+            @include media-d-m($screen-tablet-small) {
+                box-shadow: -15px -15px 0px 0px $blue;
+                bottom: -7.5px;
+                right: -7.5px;
+            }
+        }
+
+        &--right {
+            position: relative;
+
+            box-shadow: 215px -70px 0px 0px $purple;
+
+            @include media-d-m($screen-retina) {
+                box-shadow: 150px -50px 0px 0px $blue;
+            }
+
+            @include media-d-m($screen-fullhd) {
+                box-shadow: 100px -50px 0px 0px $blue;
+            }
+
+            @include media-d-m($screen-hd) {
+                box-shadow: 50px -50px 0px 0px $blue;
+            }
+
+            @include media-d-m($screen-desktop-large) {
+                bottom: -25px;
+                left: -25px;
+            }
+
+            @include media-d-m($screen-tablet-small) {
+                box-shadow: 15px -15px 0px 0px $blue;
+                bottom: -7.5px;
+                left: -7.5px;
+            }
         }
     }
 
@@ -33,64 +100,28 @@
         position: relative;
         width: 100%;
 
-        &:not(:first-of-type) {
-            margin-left: 60px;
-        }
-
-        &:not(:last-of-type) {
-            margin-right: 60px;
-        }
-    }
-
-    &__square {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-
-        @include media-d-m($screen-desktop-large) {
-            display: none;
-        }
 
         &--right {
-            background-color: $purple;
-            left: 215px;
-            bottom: 70px;
+            margin-left: 60px;
 
-            @include media-d-m($screen-retina) {
-                left: 150px;
-                bottom: 50px;
-            }
-
-            @include media-d-m($screen-fullhd) {
-                left: 100px;
-                bottom: 50px;
-            }
-
-            @include media-d-m($screen-hd) {
-                left: 50px;
-                bottom: 50px;
+            @include media-d-m($screen-desktop-large) {
+                margin-left: 0;
+                margin-bottom: 60px;
             }
         }
 
         &--left {
-            background-color: $blue;
-            right: 215px;
-            bottom: 70px;
+            margin-right: 60px;
 
-            @include media-d-m($screen-retina) {
-                right: 150px;
-                bottom: 50px;
+            @include media-d-m($screen-desktop-large) {
+                margin-right: 0px;
+                margin-bottom: 60px;
             }
+        }
 
-            @include media-d-m($screen-fullhd) {
-                right: 100px;
-                bottom: 50px;
-            }
+        @include media-d-m($screen-desktop-large) {
 
-            @include media-d-m($screen-hd) {
-                right: 50px;
-                bottom: 50px;
-            }
+            @include flex (center, center, row, nowrap);
         }
     }
 

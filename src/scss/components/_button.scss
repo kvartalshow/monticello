@@ -8,6 +8,10 @@
     transition-property: color, background-color;
     transition-duration: 0.3s;
     transition-timing-function: ease;
+
+    @include media-d-m($screen-iphone-plus){
+        max-width: none;
+    }
     
     &:hover{
         text-decoration: none;

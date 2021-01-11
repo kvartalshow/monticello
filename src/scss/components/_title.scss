@@ -2,6 +2,7 @@
     @include text($h44, 700, $dark-blue, $f-gotham-bold);
     @include flex(center, center, column, nowrap);
     text-transform: uppercase;
+    text-align: center;
 
     &__line--blue {
         margin-bottom: 20px;
