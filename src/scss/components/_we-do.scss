@@ -72,15 +72,15 @@
             box-shadow: 215px -70px 0px 0px $purple;
 
             @include media-d-m($screen-retina) {
-                box-shadow: 150px -50px 0px 0px $blue;
+                box-shadow: 150px -50px 0px 0px $purple;
             }
 
             @include media-d-m($screen-fullhd) {
-                box-shadow: 100px -50px 0px 0px $blue;
+                box-shadow: 100px -50px 0px 0px $purple;
             }
 
             @include media-d-m($screen-hd) {
-                box-shadow: 50px -50px 0px 0px $blue;
+                box-shadow: 50px -50px 0px 0px $purple;
             }
 
             @include media-d-m($screen-desktop-large) {
@@ -89,7 +89,7 @@
             }
 
             @include media-d-m($screen-tablet-small) {
-                box-shadow: 15px -15px 0px 0px $blue;
+                box-shadow: 15px -15px 0px 0px $purple;
                 bottom: -7.5px;
                 left: -7.5px;
             }

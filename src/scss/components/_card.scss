@@ -1,0 +1,36 @@
+.card {
+    position: relative;
+    left: -20px;
+    top: -20px;
+    left: -20px;
+
+    &__title {
+        @include text($h22, 700, $dark-blue, $f-gotham-bold);
+        width: calc(100%+40px);
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        @include text($h18, 400, $grey-blue, $f-open-sans);
+        width: calc(100%+40px);
+    }
+
+    &__person {
+        @include flex(flex-start, center, row, nowrap);
+        position: relative;
+        top: 30px;
+    }
+
+    &__person-avatar{
+        margin-right: 20px;
+    }
+
+    &__person-name {
+        @include text($h18, 400, $dark-blue, $f-gotham-book);
+        text-transform: uppercase;
+    }
+
+    &__person-date {
+        @include text($h14, 400, $blue, $f-gotham-book);
+    }
+}
