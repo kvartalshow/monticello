@@ -1,0 +1,144 @@
+.slider {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+
+    &__wrapper {
+        overflow: hidden;
+    }
+
+    &__inner {
+        width: 100%;
+        display: flex;
+        transition: transform 0.6s ease;
+        position: relative;
+        right: 0px;
+    }
+
+    &__item {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        @include flex(center, center, row, nowrap)
+    }
+
+    &__control {
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        color: #fff;
+        text-align: center;
+        bottom: 0;
+    }
+
+    &__control_left {
+        left: -70px;
+
+        @include media-d-m($screen-tablet-large) {
+            left: 0px;
+        }
+
+    }
+
+    &__control_right {
+        right: -70px;
+
+        @include media-d-m($screen-tablet-large) {
+            right: 0px;
+        }
+    }
+
+    &__control::before {
+        content: '';
+        display: inline-block;
+        background: transparent no-repeat center center;
+        background-size: 100% 100%;
+        @include size(40px, 40px, true)
+    }
+
+    &__control_left::before {
+        background-image: url(./../assets/svg/icons8-chevron-left-100.png);
+
+        @include media-d-m($screen-tablet-small) {
+            background: none;
+
+        }
+    }
+
+    &__control_right::before {
+        background-image: url(./../assets/svg/icons8-chevron-left-100.png);
+        transform: rotate(180deg);
+
+        @include media-d-m($screen-tablet-small) {
+            background: none;
+        }
+    }
+
+    &__indicators {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 15;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        margin-right: 15%;
+        margin-left: 15%;
+        list-style: none;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__indicators li {
+        box-sizing: content-box;
+        flex: 0 1 auto;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        margin-right: 20px;
+        margin-left: 20px;
+        text-indent: -999px;
+        cursor: pointer;
+        background-color: transparent;
+        border: 1px solid $white;
+        background-clip: padding-box;
+        transition: background-color .6s ease;
+
+        @include media-d-m($screen-iphone-plus) {
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+    }
+
+    &__indicators li.active {
+        background-color: $white;
+    }
+}
+
+
+@media (min-width: 576px) {
+    .slider__item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .slider__item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .slider__item {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}

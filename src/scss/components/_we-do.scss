@@ -1,6 +1,10 @@
 .we-do {
     &__inner {
-        padding: 100px 3%;
+        padding: 100px 3% 140px;
+
+        @include media-d-m($screen-iphone-plus){
+            padding: 75px 3% 75px;
+        }
     }
 
     &__banner {
@@ -9,6 +13,9 @@
 
     &__title {
         margin-bottom: 170px;
+        @include media-d-m($screen-iphone-plus){
+            margin-bottom: 75px;
+        }
     }
 
     &__block {
@@ -26,6 +33,10 @@
 
             @include media-d-m($screen-desktop-large) {
                 margin-bottom: 140px;
+            }
+
+            @include media-d-m($screen-iphone-plus){
+                margin-bottom: 75px;
             }
         }
 
@@ -59,7 +70,7 @@
                 right: -25px;
             }
 
-            @include media-d-m($screen-tablet-small) {
+            @include media-d-m($screen-tablet) {
                 box-shadow: -15px -15px 0px 0px $blue;
                 bottom: -7.5px;
                 right: -7.5px;
@@ -88,7 +99,7 @@
                 left: -25px;
             }
 
-            @include media-d-m($screen-tablet-small) {
+            @include media-d-m($screen-tablet) {
                 box-shadow: 15px -15px 0px 0px $purple;
                 bottom: -7.5px;
                 left: -7.5px;

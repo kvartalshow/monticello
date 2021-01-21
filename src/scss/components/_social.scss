@@ -1,10 +1,12 @@
 .social {
+    padding: 0;
     @include flex(center, center, row, nowrap);
 
     &__icon {
         transition-property: color;
         transition-duration: 0.3s;
         transition-timing-function: ease;
+        color: white;
 
         &--black {
             color: $black;

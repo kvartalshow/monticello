@@ -1,7 +1,14 @@
 .slider {
     &__block {
-        height: 300px;
+        min-height: 400px;
         width: 100%;
+
+    }
+
+    &__nav-li {
+        &:not(:last-of-type){
+            margin-bottom: 30px;
+        }
     }
 
 }

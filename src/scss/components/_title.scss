@@ -3,11 +3,22 @@
     @include flex(center, center, column, nowrap);
     text-transform: uppercase;
     text-align: center;
+    
+    &--white{
+        color: $white;
+    }
 
-    &__line--blue {
+    &__line {
         margin-bottom: 20px;
         width: 100px;
         height: 2px;
-        background-color: $dark-blue;
+
+        &--blue {
+            background-color: $dark-blue;
+        }
+
+        &--white {
+            background-color: $white;
+        }
     }
 }

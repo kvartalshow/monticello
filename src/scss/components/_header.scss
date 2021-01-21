@@ -65,11 +65,23 @@
     &__slider-h2 {
         @include text($h80, 700, $white, $f-gotham-bold);
         text-transform: uppercase;
+        @include flex(center, center, row, nowrap);
+        margin: 0 35px;
+
+        @include media-d-m($screen-tablet-small) {
+            font-size: $h44;
+        }
     }
 
     &__slider-p {
         @include text($h18, 400, $white, $f-gotham-book);
         text-transform: uppercase;
+        @include flex(center, center, row, nowrap);
+        margin: 0 35px;
+
+        @include media-d-m($screen-tablet-small) {
+            font-size: $h18;
+        }
     }
 
     &__scroll-down {
