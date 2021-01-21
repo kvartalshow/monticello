@@ -1,23 +1,30 @@
-var linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
-    V = 0.5;  // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
-for (var i = 0; i < linkNav.length; i++) {
-    linkNav[i].addEventListener('click', function(e) { //по клику на ссылку
-        e.preventDefault(); //отменяем стандартное поведение
-        var w = window.pageYOffset,  // производим прокрутка прокрутка
-            hash = this.href.replace(/[^#]*(.*)/, '$1');  // к id элемента, к которому нужно перейти
-        t = document.querySelector(hash).getBoundingClientRect().top,  // отступ от окна браузера до id
-            start = null;
-        requestAnimationFrame(step);  // подробнее про функцию анимации [developer.mozilla.org]
-        function step(time) {
-            if (start === null) start = time;
-            var progress = time - start,
-                r = (t < 0 ? Math.max(w - progress/V, w + t) : Math.min(w + progress/V, w + t));
-            window.scrollTo(0,r);
-            if (r != w + t) {
-                requestAnimationFrame(step)
-            } else {
-                location.hash = hash  // URL с хэшем
-            }
+$(document).ready(function() {
+    $(window).bind("load", function() {
+      //Пример исключения ссылки:
+      //$('a[href*="#"]:not([href="#"],[href="#spu-209"],[href="#spu-211"],[href="#spu-212"],[href="#spu-213"],[href="#spu-214"],[href="#spu-215"],[href="#spu-217"])').click(function() {
+      $('a:not(.spu-clickable)[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') ||
+          location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            $("html, body").animate({
+              // $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 500);
+            return false;
+          }
         }
-    }, false);
-}
+      });
+    });
+  });
+  $(window).load(function() {
+    function goToByScroll(id) {
+      $("html, body").animate({
+        scrollTop: $("#" + id).offset().top
+      }, 500);
+    }
+    if (window.location.hash != '') {
+      goToByScroll(window.location.hash.substr(1));
+    }
+  });
