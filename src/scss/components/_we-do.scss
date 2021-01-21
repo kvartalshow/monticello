@@ -1,0 +1,144 @@
+.we-do {
+    &__inner {
+        padding: 100px 3% 140px;
+
+        @include media-d-m($screen-iphone-plus){
+            padding: 75px 3% 75px;
+        }
+    }
+
+    &__banner {
+        max-width: 630px;
+    }
+
+    &__title {
+        margin-bottom: 170px;
+        @include media-d-m($screen-iphone-plus){
+            margin-bottom: 75px;
+        }
+    }
+
+    &__block {
+        &--left {
+            @include flex (center, center, row, nowrap);
+
+        }
+
+        &--right {
+            @include flex (center, center, row-reverse, nowrap);
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: 210px;
+
+            @include media-d-m($screen-desktop-large) {
+                margin-bottom: 140px;
+            }
+
+            @include media-d-m($screen-iphone-plus){
+                margin-bottom: 75px;
+            }
+        }
+
+        @include media-d-m($screen-desktop-large) {
+
+            @include flex (center, center, column, nowrap);
+        }
+    }
+
+    &__images {
+
+        &--left {
+            position: relative;
+
+            box-shadow: -215px -70px 0px 0px $blue;
+
+            @include media-d-m($screen-retina) {
+                box-shadow: -150px -50px 0px 0px $blue;
+            }
+
+            @include media-d-m($screen-fullhd) {
+                box-shadow: -100px -50px 0px 0px $blue;
+            }
+
+            @include media-d-m($screen-hd) {
+                box-shadow: -50px -50px 0px 0px $blue;
+            }
+
+            @include media-d-m($screen-desktop-large) {
+                bottom: -25px;
+                right: -25px;
+            }
+
+            @include media-d-m($screen-tablet) {
+                box-shadow: -15px -15px 0px 0px $blue;
+                bottom: -7.5px;
+                right: -7.5px;
+            }
+        }
+
+        &--right {
+            position: relative;
+
+            box-shadow: 215px -70px 0px 0px $purple;
+
+            @include media-d-m($screen-retina) {
+                box-shadow: 150px -50px 0px 0px $purple;
+            }
+
+            @include media-d-m($screen-fullhd) {
+                box-shadow: 100px -50px 0px 0px $purple;
+            }
+
+            @include media-d-m($screen-hd) {
+                box-shadow: 50px -50px 0px 0px $purple;
+            }
+
+            @include media-d-m($screen-desktop-large) {
+                bottom: -25px;
+                left: -25px;
+            }
+
+            @include media-d-m($screen-tablet) {
+                box-shadow: 15px -15px 0px 0px $purple;
+                bottom: -7.5px;
+                left: -7.5px;
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+        width: 100%;
+
+
+        &--right {
+            margin-left: 60px;
+
+            @include media-d-m($screen-desktop-large) {
+                margin-left: 0;
+                margin-bottom: 60px;
+            }
+        }
+
+        &--left {
+            margin-right: 60px;
+
+            @include media-d-m($screen-desktop-large) {
+                margin-right: 0px;
+                margin-bottom: 60px;
+            }
+        }
+
+        @include media-d-m($screen-desktop-large) {
+
+            @include flex (center, center, row, nowrap);
+        }
+    }
+
+    &__button {
+        margin-bottom: 40px;
+    }
+
+
+}

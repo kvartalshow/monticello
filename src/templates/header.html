@@ -1,5 +1,131 @@
-<header>
-  <h1>
-    <content></content>
-  </h1>
+<header class="header">
+  <div class="header__inner">
+    <div class="header__menu container">
+      <div class="header__logo logo">
+        <img src="./assets/images/logoImage.png" alt="">
+      </div>
+      <ul class="header__items">
+        <li class="header__item item">
+          <div class="cercle cercle--white"></div> <a href="#" class="header__a">About us</a>
+        </li>
+        <li class="header__item item">
+          <div class="cercle cercle--white"></div> <a href="#" class="header__a">Projects</a>
+        </li>
+        <li class="header__item item">
+          <div class="cercle cercle--white"></div> <a href="#" class="header__a">News</a>
+        </li>
+        <li class="header__item item">
+          <div class="cercle cercle--white"></div> <a href="#" class="header__a">Contact</a>
+        </li>
+      </ul>
+      <ul class="header__social social">
+        <li class="social__item"><span class="icon-twitter social__icon"></span></li>
+        <li class="social__item"><span class="icon-facebook social__icon"></span></li>
+        <li class="social__item"><span class="icon-instagram social__icon"></span></li>
+      </ul>
+      <div class="tpl-hamburger" id="sandwichmenu">
+        <svg viewBox="0 0 800 600">
+          <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"
+            class="tpl-hamburger__top"></path>
+          <path d="M300,320 L540,320" class="tpl-hamburger__middle"></path>
+          <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190"
+            class="tpl-hamburger__bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+        </svg>
+      </div>
+      <div class="menu__box">
+        <ul class="burger__menu-items">
+          <li class="burger__menu-item item">
+            <div class="cercle cercle--black"></div> <a href="#" class="burger__menu-a">About us</a>
+          </li>
+          <li class="burger__menu-item item">
+            <div class="cercle cercle--black"></div> <a href="#" class="burger__menu-a">Projects</a>
+          </li>
+          <li class="burger__menu-item item">
+            <div class="cercle cercle--black"></div> <a href="#" class="burger__menu-a">News</a>
+          </li>
+          <li class="burger__menu-item item">
+            <div class="cercle cercle--black"></div> <a href="#" class="burger__menu-a">Contact</a>
+          </li>
+        </ul>
+        <ul class="burger__menu-social social">
+          <li class="social__item social__item--black"><span
+              class="icon-twitter social__icon social__icon--black"></span></li>
+          <li class="social__item social__item--black"><span
+              class="icon-facebook social__icon social__icon--black"></span></li>
+          <li class="social__item social__item--black"><span
+              class="icon-instagram social__icon social__icon--black"></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="header__slider">
+      <div class="uk-position-relative uk-visible-toggle uk-light header__block" uk-slider="autoplay: true"
+        tabindex="-1" uk-slider>
+
+        <ul class="uk-slider-items uk-grid">
+          <li class="uk-width-1-1 header__block">
+            <div class="uk-panel">
+              <div class="slider__block"></div>
+              <div class="uk-position-center uk-text-center">
+                <h2 uk-slider-parallax="x: 100,-100"><span class="header__slider-h2">Simple & Mordern</span></h2>
+                <p uk-slider-parallax="x: 200,-200"><span class="header__slider-p">we make the world's beautiful evert
+                    day</span></p>
+              </div>
+            </div>
+          </li>
+          <li class="uk-width-1-1">
+            <div class="uk-panel">
+              <div class="slider__block"></div>
+              <div class="uk-position-center uk-text-center">
+                <h2 uk-slider-parallax="x: 100,-100"><span class="header__slider-h2">Simple & Mordern</span></h2>
+                <p uk-slider-parallax="x: 200,-200"><span class="header__slider-p">we make the world's beautiful evert
+                    day</span></p>
+              </div>
+            </div>
+          </li>
+          <li class="uk-width-1-1">
+            <div class="uk-panel">
+              <div class="slider__block"></div>
+              <div class="uk-position-center uk-text-center">
+                <h2 uk-slider-parallax="x: 100,-100"><span class="header__slider-h2">Simple & Mordern</span></h2>
+                <p uk-slider-parallax="x: 200,-200"><span class="header__slider-p">we make the world's beautiful evert
+                    day</span></p>
+              </div>
+            </div>
+          </li>
+          <li class="uk-width-1-1">
+            <div class="uk-panel">
+              <div class="slider__block"></div>
+              <div class="uk-position-center uk-text-center">
+                <h2 uk-slider-parallax="x: 100,-100"><span class="header__slider-h2">Simple & Mordern</span></h2>
+                <p uk-slider-parallax="x: 200,-200"><span class="header__slider-p">we make the world's beautiful evert
+                    day</span></p>
+              </div>
+            </div>
+          </li>
+          <li class="uk-width-1-1">
+            <div class="uk-panel">
+              <div class="slider__block"></div>
+              <div class="uk-position-center uk-text-center">
+                <h2 uk-slider-parallax="x: 100,-100"><span class="header__slider-h2">Simple & Mordern</span></h2>
+                <p uk-slider-parallax="x: 200,-200"><span class="header__slider-p">we make the world's beautiful evert
+                    day</span></p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="uk-position-center-right uk-position-medium header__dots">
+          <ul class="uk-dotnav uk-dotnav-vertical">
+            <li class="slider__nav-li"uk-slider-item="0"><a href="#">Item 1</a></li>
+            <li class="slider__nav-li" uk-slider-item="1"><a href="#">Item 2</a></li>
+            <li class="slider__nav-li" uk-slider-item="2"><a href="#">Item 3</a></li>
+            <li class="slider__nav-li" uk-slider-item="3"><a href="#">Item 3</a></li>
+            <li class="slider__nav-li" uk-slider-item="4"><a href="#">Item 3</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="#we-do" class="header__scroll-down header__a">
+      <span class="header__arrow arrow">&#748;</span>
+    </a>
+  </div>
 </header>

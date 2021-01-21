@@ -1,0 +1,79 @@
+.gallery {
+    &__inner {
+        padding: 140px 3%;
+
+        @include flex(center, center, column, nowrap);
+
+
+        @include media-d-m($screen-iphone-plus) {
+            padding: 75px 3%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 100px;
+
+        @include media-d-m($screen-iphone-plus) {
+            margin-bottom: 75px;
+        }
+    }
+
+    &__block {
+        @include flex(center, center, row, nowrap);
+        margin-bottom: 60px;
+
+        @include media-d-m($screen-tablet-large) {
+            @include flex(center, center, row, wrap);
+        }
+    }
+
+    &__block-wrapper {
+        width: 50%;
+        @include flex(center, center, row, nowrap);
+        @include media-d-m($screen-tablet-large) {
+            width: 100%;
+        }
+    }
+
+    &__360 {
+        @include flex(center, center, row, nowrap);
+
+        width: 50%;
+        position: relative;
+        margin-right: 10px;
+
+        @include media-d-m($screen-tablet-large) {
+            width: 100%;
+            margin-right: 0px;
+            margin-bottom: 10px;
+        }
+
+    }
+
+    &__1 {
+        opacity: 0.8;
+        -moz-opacity: 0.8;
+        filter: alpha(opacity=80) rgb(179, 178, 178);
+        -khtml-opacity: 0.8;
+        background-color: #000;
+    }
+
+    &__2,
+    .gallery__4 {
+        margin-bottom: 10px;
+    }
+
+    &__image-360 {
+        position: absolute;
+    }
+
+    &__1-2 {
+        @include flex(center, flex-end, column, nowrap);
+        width: calc(50%);
+        margin-right: 10px;
+    }
+
+    &__2-2 {
+        width: calc(50%);
+    }
+}

@@ -1,0 +1,14 @@
+.cercle {
+    @include size(15px, 15px, true);
+    transition-property: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    margin-right: 14px;
+
+    &--white {
+        border: 1px $white solid;
+    }
+    &--black {
+        border: 1px $black solid;
+    }
+}

@@ -1,0 +1,127 @@
+$style: tpl-hamburger;
+
+.tpl-hamburger {
+  position: relative;
+
+  // top: 5px;
+  @include media-d-m($screen-tablet-small) {
+    top: 0.4px;
+  }
+
+  & svg {
+    @include size(50px, 80px);
+    cursor: pointer;
+    // margin-right: -10px;
+
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  svg:not(:root) {
+    overflow: hidden;
+  }
+
+  & path.#{$style}__top,
+  & path.#{$style}__bottom {
+    stroke-dasharray: 240px, 950px;
+  }
+
+  & path {
+    fill: none;
+    stroke: $white;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    stroke-width: 40px;
+    transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s,
+      stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s;
+  }
+
+  & path.#{$style}__middle {
+    stroke-dasharray: 240px, 240px;
+  }
+
+  & path {
+    fill: none;
+    stroke: $white;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    stroke-width: 40px;
+    transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s,
+      stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s;
+  }
+
+  &.active path.#{$style}__top,
+  &.active path.#{$style}__bottom {
+    stroke-dashoffset: -650px;
+  }
+
+  & path.#{$style}__top,
+  & path.#{$style}__bottom {
+    stroke-dasharray: 240px, 950px;
+  }
+
+  &.active path.#{$style}__middle {
+    stroke-dasharray: 1px, 220px;
+    stroke-dashoffset: -115px;
+  }
+}
+
+.tpl-hamburger {
+  display: none;
+}
+
+.menu__box.active {
+  visibility: visible;
+  left: 0;
+}
+
+.menu {
+  &__box {
+    @include size(60%, 100%);
+    @include flex(center, center, column, nowrap);
+    position: fixed;
+    visibility: hidden;
+    top: 0px;
+    left: -100%;
+    z-index: 3;
+
+    padding: 50px 0 0 0;
+
+    list-style: none;
+
+    background-color: $white;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.5);
+
+    transition-duration: 0.3s;
+  }
+}
+
+.burger {
+
+  &__menu-items {
+    padding: 0;
+  }
+
+  &__menu-item {
+    padding: 12px;
+
+    text-decoration: none;
+
+    transition-duration: 0.3s;
+    text-align: center;
+  }
+
+  &__menu-a {
+    color: $black;
+
+    &:hover {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+}
+
+@include media-d-m($screen-desktop-large) {
+  .tpl-hamburger {
+    display: block;
+  }
+}

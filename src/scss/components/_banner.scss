@@ -1,0 +1,24 @@
+.banner {
+    &__suptitle {
+        @include text($h22, 400, $dark-blue, $f-gotham-book);
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    &__title{
+        @include text($h44, 700, $dark-blue, $f-gotham-bold);
+        text-transform: uppercase;
+        margin: 0 0 20px 0;
+    }
+
+    &__subtitle{
+        @include text($h18, 400, $grey-blue, $f-open-sans);
+        margin: 0 0 20px 0;
+        line-height: 30px;
+    }
+
+    &__location{
+        @include text($h18, 400, $dark-blue, $f-open-sans);
+        font-style: italic ;
+    }
+}

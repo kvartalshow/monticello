@@ -1,0 +1,3 @@
+.container{
+    @include max-width(calc(1200px+3%));
+}

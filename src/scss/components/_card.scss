@@ -1,0 +1,42 @@
+.card {
+    background: $white;
+    max-width: 350px;
+    width: 100%;
+
+    &__image {
+        object-fit: cover;
+    }
+
+    &__banner{
+        padding: 30px 20px;
+    }
+
+    &__title {
+        @include text($h22, 700, $dark-blue, $f-gotham-bold);
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        @include text($h18, 400, $grey-blue, $f-open-sans);
+        margin-bottom: 30px;
+    }
+
+    &__person {
+        @include flex(flex-start, center, row, nowrap);
+
+    }
+
+    &__person-avatar {
+        margin-right: 20px;
+    }
+
+    &__person-name {
+        @include text($h18, 400, $dark-blue, $f-gotham-book);
+        text-transform: uppercase;
+    }
+
+    &__person-date {
+        @include text($h14, 400, $blue, $f-gotham-book);
+    }
+}
