@@ -4,16 +4,369 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.bb820782.css">
-  <title>Parcel</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.9/dist/css/uikit.min.css">
+  <link rel="stylesheet" href="style.339c3446.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="">
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <title>MONTICELLO</title>
 </head>
 
 <body>
-  <header>
-  <h1>
-    Parcel
-  </h1>
+  <header class="header">
+  <div class="header__inner">
+    <div class="container header__menu">
+      <div class="header__logo logo">
+        <img src="logoImage.4384c7d3.png" alt="">
+      </div>
+      <ul class="header__items">
+        <li class="header__item item">
+          <div class="cercle cercle--white"></div> <a href="#" class="header__a">About us</a>
+        </li>
+        <li class="header__item item">
+          <div class="cercle cercle--white"></div> <a href="#" class="header__a">Projects</a>
+        </li>
+        <li class="header__item item">
+          <div class="cercle cercle--white"></div> <a href="#" class="header__a">News</a>
+        </li>
+        <li class="header__item item">
+          <div class="cercle cercle--white"></div> <a href="#" class="header__a">Contact</a>
+        </li>
+      </ul>
+      <ul class="header__social social">
+        <li class="social__item"><span class="icon-twitter social__icon"></span></li>
+        <li class="social__item"><span class="icon-facebook social__icon"></span></li>
+        <li class="social__item"><span class="icon-instagram social__icon"></span></li>
+      </ul>
+      <div class="tpl-hamburger" id="sandwichmenu">
+        <svg viewBox="0 0 800 600">
+          <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" class="tpl-hamburger__top"></path>
+          <path d="M300,320 L540,320" class="tpl-hamburger__middle"></path>
+          <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" class="tpl-hamburger__bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+        </svg>
+      </div>
+      <div class="menu__box">
+        <ul class="burger__menu-items">
+          <li class="burger__menu-item item">
+            <div class="cercle cercle--black"></div> <a href="#" class="burger__menu-a">About us</a>
+          </li>
+          <li class="burger__menu-item item">
+            <div class="cercle cercle--black"></div> <a href="#" class="burger__menu-a">Projects</a>
+          </li>
+          <li class="burger__menu-item item">
+            <div class="cercle cercle--black"></div> <a href="#" class="burger__menu-a">News</a>
+          </li>
+          <li class="burger__menu-item item">
+            <div class="cercle cercle--black"></div> <a href="#" class="burger__menu-a">Contact</a>
+          </li>
+        </ul>
+        <ul class="burger__menu-social social">
+          <li class="social__item social__item--black"><span class="icon-twitter social__icon social__icon--black"></span></li>
+          <li class="social__item social__item--black"><span class="icon-facebook social__icon social__icon--black"></span></li>
+          <li class="social__item social__item--black"><span class="icon-instagram social__icon social__icon--black"></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="header__slider">
+      <div class="header__block uk-light uk-position-relative uk-visible-toggle" uk-slider="autoplay: true" tabindex="-1">
+
+        <ul class="uk-grid uk-slider-items">
+          <li class="header__block uk-width-1-1">
+            <div class="uk-panel">
+              <div class="slider__block"></div>
+              <div class="uk-position-center uk-text-center">
+                <h2 uk-slider-parallax="x: 100,-100"><span class="header__slider-h2">Simple & Mordern</span></h2>
+                <p uk-slider-parallax="x: 200,-200"><span class="header__slider-p">we make the world's beautiful evert
+                    day</span></p>
+              </div>
+            </div>
+          </li>
+          <li class="uk-width-1-1">
+            <div class="uk-panel">
+              <div class="slider__block"></div>
+              <div class="uk-position-center uk-text-center">
+                <h2 uk-slider-parallax="x: 100,-100"><span class="header__slider-h2">Simple & Mordern</span></h2>
+                <p uk-slider-parallax="x: 200,-200"><span class="header__slider-p">we make the world's beautiful evert
+                    day</span></p>
+              </div>
+            </div>
+          </li>
+          <li class="uk-width-1-1">
+            <div class="uk-panel">
+              <div class="slider__block"></div>
+              <div class="uk-position-center uk-text-center">
+                <h2 uk-slider-parallax="x: 100,-100"><span class="header__slider-h2">Simple & Mordern</span></h2>
+                <p uk-slider-parallax="x: 200,-200"><span class="header__slider-p">we make the world's beautiful evert
+                    day</span></p>
+              </div>
+            </div>
+          </li>
+          <li class="uk-width-1-1">
+            <div class="uk-panel">
+              <div class="slider__block"></div>
+              <div class="uk-position-center uk-text-center">
+                <h2 uk-slider-parallax="x: 100,-100"><span class="header__slider-h2">Simple & Mordern</span></h2>
+                <p uk-slider-parallax="x: 200,-200"><span class="header__slider-p">we make the world's beautiful evert
+                    day</span></p>
+              </div>
+            </div>
+          </li>
+          <li class="uk-width-1-1">
+            <div class="uk-panel">
+              <div class="slider__block"></div>
+              <div class="uk-position-center uk-text-center">
+                <h2 uk-slider-parallax="x: 100,-100"><span class="header__slider-h2">Simple & Mordern</span></h2>
+                <p uk-slider-parallax="x: 200,-200"><span class="header__slider-p">we make the world's beautiful evert
+                    day</span></p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="header__dots uk-position-center-right uk-position-medium">
+          <ul class="uk-dotnav uk-dotnav-vertical">
+            <li class="slider__nav-li" uk-slider-item="0"><a href="#">Item 1</a></li>
+            <li class="slider__nav-li" uk-slider-item="1"><a href="#">Item 2</a></li>
+            <li class="slider__nav-li" uk-slider-item="2"><a href="#">Item 3</a></li>
+            <li class="slider__nav-li" uk-slider-item="3"><a href="#">Item 3</a></li>
+            <li class="slider__nav-li" uk-slider-item="4"><a href="#">Item 3</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="#we-do" class="header__a header__scroll-down">
+      <span class="arrow header__arrow">&#748;</span>
+    </a>
+  </div>
 </header>
+  <div class="we-do" id="we-do">
+    <div class="container we-do__inner">
+        <div class="title we-do__title">
+            <div class="title__line--blue"></div>
+            <span>What we do</span>
+        </div>
+        <div class="we-do__block we-do__block--left">
+            <div class="we-do__img we-do__img--left">
+                <img class="we-do__images we-do__images--left" src="we-do-1.96bd4307.png" alt="">
+            </div>
+            <div class="we-do__banner">
+                <h3 class="banner__suptitle">one world</h3>
+                <h2 class="banner__title">trade center
+                    <h3 class="banner__subtitle">Increasing prosperity in our lives can be accomplished by having the
+                        right frame of mind. The truth is, our thoughts are very powerful.</h3>
+                    <a href="#" class="button we-do__button">More details</a>
+                    <span class="icon-maps"></span>
+                    <span class="banner__location">New York City, United States - 1776 Feet</span>
+            </h2></div>
+        </div>
+        <div class="we-do__block we-do__block--right">
+            <div class="we-do__img we-do__img--right">
+                <img class="we-do__images we-do__images--right" src="we-do-2.88ca43f4.png" alt="">
+            </div>
+            <div class="we-do__banner">
+                <h3 class="banner__suptitle">International</h3>
+                <h2 class="banner__title">Commerce Centre
+                    <h3 class="banner__subtitle">Successful businesses have many things in common, today we’ll look at
+                        the big ‘R’ of recognition and how a digital advertising network may help.
+                    </h3>
+                    <a href="#" class="button we-do__button">More details</a>
+                    <span class="icon-maps"></span>
+                    <span class="banner__location">Hong Kong - 1588 Feet</span>
+            </h2></div>
+        </div>
+    </div>
+</div>
+  <div class="news">
+    <div class="container news__inner">
+        <div class="news__title title title--white">
+            <div class="title__line title__line--white"></div>
+            <span>latest news</span>
+        </div>
+        <div class="slider">
+            <div class="slider__wrapper">
+                <div class="slider__inner">
+                    <div class="slider__item">
+                        <div class="card">
+                            <div class="card__block-for-img"><img class="card__image" src="slider_1.cd2a684f.png" alt=""></div>
+                            <div class="card__banner">
+                                <div class="card__title">See The Unmatched Beauty Of The Great</div>
+                                <div class="card__subtitle">Free directories directories are perfect for
+                                    customers that are...</div>
+                                <div class="card__person">
+                                    <div class="card__person-avatar"><img src="slider_logo_1.95c3e8ea.png" alt="">
+                                    </div>
+                                    <div class="card__person-info">
+                                        <div class="card__person-name">Isaac Dunn</div>
+                                        <div class="card__person-date">09 Feb 2017</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="card">
+                            <div class="card__block-for-img"><img class="card__image" src="slider_2.e38a7db8.png" alt=""></div>
+                            <div class="card__banner">
+                                <div class="card__title">Effective Advertising Pointers.</div>
+                                <div class="card__subtitle">Having a home based business is a wonderful asset to
+                                    your life...</div>
+                                <div class="card__person">
+                                    <div class="card__person-avatar"><img src="slider_logo_2.c2507c89.png" alt="">
+                                    </div>
+                                    <div class="card__person-info">
+                                        <div class="card__person-name">Dominic Freeman</div>
+                                        <div class="card__person-date">24 Apr 2017</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="card">
+                            <div class="card__block-for-img"><img class="card__image" src="slider_3.30b3cb5d.png" alt=""></div>
+                            <div class="card__banner">
+                                <div class="card__title">Hypnotize Yourself Into The Ghost.</div>
+                                <div class="card__subtitle">There are many things that are important to catalog
+                                    design....</div>
+                                <div class="card__person">
+                                    <div class="card__person-avatar"><img src="slider_logo_3.cd70ac9d.png" alt="">
+                                    </div>
+                                    <div class="card__person-info">
+                                        <div class="card__person-name">Alice Ward</div>
+                                        <div class="card__person-date">30 Dec 2017</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="card">
+                            <div class="card__block-for-img"><img class="card__image" src="slider_1.cd2a684f.png" alt=""></div>
+                            <div class="card__banner">
+                                <div class="card__title">See The Unmatched Beauty Of The Great</div>
+                                <div class="card__subtitle">Free directories directories are perfect for
+                                    customers that are...</div>
+                                <div class="card__person">
+                                    <div class="card__person-avatar"><img src="slider_logo_1.95c3e8ea.png" alt="">
+                                    </div>
+                                    <div class="card__person-info">
+                                        <div class="card__person-name">Isaac Dunn</div>
+                                        <div class="card__person-date">09 Feb 2017</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="card">
+                            <div class="card__block-for-img"><img class="card__image" src="slider_2.e38a7db8.png" alt=""></div>
+                            <div class="card__banner">
+                                <div class="card__title">Effective Advertising Pointers.</div>
+                                <div class="card__subtitle">Having a home based business is a wonderful asset to
+                                    your life...</div>
+                                <div class="card__person">
+                                    <div class="card__person-avatar"><img src="slider_logo_2.c2507c89.png" alt="">
+                                    </div>
+                                    <div class="card__person-info">
+                                        <div class="card__person-name">Dominic Freeman</div>
+                                        <div class="card__person-date">24 Apr 2017</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="slider__control slider__control_left" href="#" role="button"></a>
+            <a class="slider__control slider__control_right" href="#" role="button"></a>
+        </div>
+
+    </div>
+</div>
+  <div class="gallery">
+    <div class="container gallery__inner">
+        <div class="gallery__title title">
+            <div class="title__line--blue"></div>
+            <span>gallery</span>
+        </div>
+        <div class="gallery__block">
+            <div class="gallery__360">
+                <img class="gallery__1" src="gallery_1.e17ff5cb.png" alt="">
+                <img class="gallery__image-360" src="gallery_360.13c3dc34.png" alt="">
+            </div>
+            <div class="gallery__block-wrapper">
+                <div class="gallery__1-2">
+                    <img class="gallery__2" src="gallery_2.8f4b29af.png" alt="">
+                    <img class="gallery__3" src="gallery_3.88ba7a27.png" alt="">
+                </div>
+                <div class="gallery__2-2">
+                    <img class="gallery__4" src="gallery_4.edf1742f.png" alt="">
+                    <img class="gallery__5" src="gallery_5.2bd310f4.png" alt="">
+                </div>
+            </div>
+        </div>
+        <a href="#" class="button gallery__button">see more</a>
+    </div>
+</div>
+  <div class="footer">
+    <section class="map">
+        <div class="map__main">
+            <div id="mapid"></div>
+        </div>
+    </section>
+    <div class="footer__inner">
+        <div class="footer__banner">
+            <div class="footer__title title title--blue">
+                <div class="title__line title__line--blue"></div>
+                <span>get in touch</span>
+            </div>
+            <ul class="footer__contact">
+                <li class="footer__contact-item">
+                    <span class="footer__icon icon-maps"></span>
+                    91 Nolan Extensions Suite 670
+                </li>
+                <li class="footer__contact-item">
+                    <span class="footer__icon icon-call"></span>
+                    +001 356-868-2454
+                </li>
+                <li class="footer__contact-item">
+                    <span class="footer__icon icon-email"></span>
+                    gahuy93@gmail.com
+                </li>
+                <li class="footer__contact-item">
+                    <span class="footer__icon icon-time"></span>
+                    From 07:05AM to 19:30PM
+                </li>
+            </ul>
+            <form action="" method="POST" class="footer__form">
+                <input type="text" class="footer__input" placeholder="Name">
+                <input type="email" class="footer__input" placeholder="Email">
+                <button class="button footer__button">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer__information-wrapper">
+        <div class="footer__information">
+            <div class="footer__logo"><img src="logoImage.4384c7d3.png" alt=""></div>
+            <ul class="footer__social social">
+                <li class="social__item"><span class="icon-twitter social__icon"></span></li>
+                <li class="social__item"><span class="icon-facebook social__icon"></span></li>
+                <li class="social__item"><span class="icon-instagram social__icon"></span></li>
+            </ul>
+            <span class="footer__copyrights">Copyrights © 2017 Monticello Group</span>
+            <span class="footer__stick">|</span>
+            <span class="footer__made-with">Made with <span class="icon-like"></span> by Ga Huy</span>
+        </div>
+    </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.9/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.9/dist/js/uikit-icons.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+  <script src="burger-menu.c4a3c016.js" async=""></script>
+  <script src="news-slider.93ecb5d6.js" async=""></script>
+  <script src="map.57018b88.js"></script>
+  <script src="scroll.4c58cb04.js"></script>
+  <script src="light-scroll.38d2a6fa.js"></script>
 </body>
 
 </html>
